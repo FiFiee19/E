@@ -11,4 +11,5 @@ def home(req):
 def delete(req,id):
     c = Course.objects.get(pk=id)
     c.delete()
-    return redirect('/')
+    # return redirect('/')
+    return render(req, 'course/delete.html')
